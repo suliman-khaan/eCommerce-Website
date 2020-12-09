@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+ :root{
+ 	--red :#dc3545;
+ }
+ *{
+ 	font-family: 'Poppins', sans-serif;
+ 	box-sizing: border-box;
+ }
+
+  #nav-top form{
+  	/*position: relative;*/
+  }
+ #nav-top form input,
+ #nav-top form input:active,
+ #nav-top form button,
+ #nav-top form select{
+ 	outline: none!important;
+ 	box-shadow: none;
+ 	padding: 5px;
+ }
+  #nav-top form input{
+  	/*width: 80%;*/
+  }
+ #nav-top form button{
+ 	position: absolute;
+ 	right: 0;
+ 	top: 0;
+ 	background-color: var(--red);
+ 	height: 100%;
+ 	width: 50px;
+ 	border-radius: 0;
+ }
+ #nav-top ul li:nth-child(1) a{
+ 	padding: 8px 13px;
+ 	border-radius: 60px;
+ 	font-size: 12px;
+ }
+ #nav-top ul li:nth-child(2) a{
+ 	padding: 8px 12px;
+ 	border-radius: 60px;
+ 	font-size: 12px;
+ }
+ #nav-top ul li:nth-child(3) a{
+ 	padding: 8px 12px;
+ 	border-radius: 60px;
+ 	font-size: 12px;
+ }
+ 
+nav div ul li{
+	padding: 0 12px;
+	position: relative;
+}
+
+nav div ul li.active :before{
+	border-bottom: 3px solid var(--red);
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	/*z-index: 999;*/
+
+}
+.cart{
+	height: 100%;
+	position:relative;
+	right: 0;
+	padding: 12px 14px;
+	margin-top: -28px!important;
+	/*margin-bottom: -5px!important*/
+}
+.cart:before{
+	position: absolute;
+	top: 0;
+	left: -10px;
+	content: "";
+	/*height: 20px;
+	width: 20px;*/
+	/*background-color: blue;*/
+	border-bottom: 5px solid var(--red);
+	border-left: 5px solid transparent;
+	border-right: 5px solid var(--red);
+	border-top: 5px solid transparent; 
+	filter: grayscale(20%);
+}
+.cart a{
+	text-decoration: none;
+	color: #fff;
+}
+#badge{
+	position: relative;
+	bottom: 15px;
+	right: 12px;
+	border-radius: 20px;
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+	nav div ul li.active :before{
+		bottom: 3px;
+	}
+	.cart{
+		margin-top: 0px!important;
+	}
+	.cart:before{
+		display: none;
+	}
+}
