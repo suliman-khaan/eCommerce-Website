@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.green.min.css">
-    <script src="https://kit.fontawesome.com/89653f1a61.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/89653f1a61.js" crossorigin="anonymous"></script> -->
     
 
     <title>Winter Store</title>
@@ -105,14 +105,40 @@
 		</div>
 	</section>	
 	<section id="men" class="men">
-		<div class="men-heading"><h2 class="text-danger text-uppercase">Men</h2></div>
-		<div class="container-fluid row">
-			<div class="col-6">For Men</div>
-			<div class="col-6 bg-danger" id="men-slider">
-				<div class="owl-carousel" id="owl-two">
-					<div class="item">1</div>
-					<div class="item">2</div>
-					<div class="item">3</div>
+		<div class="men-heading row col-lg-3 col-md-6 col-6 offset-1 my-5"><h2 class="text-dark text-uppercase ml-3">Men</h2></div>
+		<div class="container">
+			<div class="row">	
+				<div class="col-md-4 col-sm-12 men-content mb-2"><h2 class="text-uppercase text-white">For Men</h2></div>
+				<div class="col-md-8 col-sm-12" id="men-slider">
+					<div class="owl-carousel" id="owl-two">
+						<div class="item">
+							<div class="card border-0  bg-transparent">
+								<img class="card-img-top rounded-0" src="img/men1.jpeg" alt="Card image cap">
+								<div class="card-body">
+									<h5 class="card-title border-bottom border-danger">White Shawl <span class="badge code">001</span></h5>
+									<a href="#" class="btn btn-danger rounded-0 py-1">Order</a><span class="badge price">PKR 200</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="card border-0  bg-transparent">
+								<img class="card-img-top rounded-0" src="img/women1.jpg" alt="Card image cap">
+								<div class="card-body">
+									<h5 class="card-title border-bottom border-danger">White Shawl <span class="badge code">001</span></h5>
+									<a href="#" class="btn btn-danger rounded-0 py-1">Order</a><span class="badge price">PKR 200</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="card border-0  bg-transparent">
+								<img class="card-img-top rounded-0" src="img/women2.jpeg" alt="Card image cap">
+								<div class="card-body">
+									<h5 class="card-title border-bottom border-danger">White Shawl <span class="badge code">001</span></h5>
+									<a href="#" class="btn btn-danger rounded-0 py-1">Order</a><span class="badge price">PKR 200</span>
+								</div>
+							</div>
+						</div><!--item-->
+					</div><!--carousel-->
 				</div>
 			</div>
 		</div>
@@ -148,8 +174,22 @@
 
     		$('#owl-two').owlCarousel({
     			loop: true,
-    			items : 2,
-    			nav: false
+    			items : 3,
+    			nav: true,
+				margin : 10,
+				smartSpeed: 1000,
+				responsiveClass: true,
+				responsive: {
+					992:{
+						items : 3
+					},
+					576: {
+						items: 2
+					},
+					0:{
+						items : 1
+					}
+				}
     		});
     	})
     </script>
