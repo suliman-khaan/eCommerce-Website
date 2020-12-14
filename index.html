@@ -13,7 +13,7 @@
     <title>Winter Store</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="top">
     	<div class="row text-center text-uppercase py-1 border">
     		<div class="col-4 border-right"><i class="fa fa-shopping-cart px-1" aria-hidden="true"></i><span>Free Shipping on All items</span></div>
     		<div class="col-4  border-right"><i class="fa fa-money px-1" aria-hidden="true"></i><span>100% money back guarantee</span></div>
@@ -48,10 +48,10 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav m-auto text-uppercase">
 		      	<li class="nav-item active">
-			    	<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			    	<a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
 				</li>
 			    <li class="nav-item">
-			        <a class="nav-link" href="#">Features</a>
+			        <a class="nav-link" href="#men">Features</a>
 			    </li>
 			    <li class="nav-item">
 			   	    <a class="nav-link" href="#">Shop</a>
@@ -71,14 +71,52 @@
 			</div>
 		</div>
 	</nav>
-	<section>
+	<section id="headCarousel">
 		<div class="owl-carousel owl-theme">
-			<div class="item">1\aa</div>
-			<div class="item">12asd</div>
-			<div class="item">1adf</div>
-			<div class="item">1adsf</div>
+			<div class="item slide-1">
+				<div class="slide-content col-md-6 col-sm-8 p-3">
+					<h2 class="text-white text-uppercase mb-3">Welcome to Winter Store</h2>
+					<p class="text-white text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur.</p>
+					<button class="btn btn-outline-danger rounded-0">Order Now</button>
+				</div>
+			</div>
+			<div class="item slide-2"><div class="slide-content col-md-6 col-sm-8 p-3">
+					<h2 class="text-white text-uppercase mb-3">Welcome to Winter Store</h2>
+					<p class="text-white text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur.</p>
+					<button class="btn btn-outline-danger rounded-0">Order Now</button>
+				</div></div>
+			<div class="item slide-3"><div class="slide-content col-md-6 col-sm-8 p-3">
+					<h2 class="text-white text-uppercase mb-3">Welcome to Winter Store</h2>
+					<p class="text-white text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur.</p>
+					<button class="btn btn-outline-danger rounded-0">Order Now</button>
+				</div></div>
 		</div>
-	</section>	  
+	</section>	
+	<!-- <section id="men" class="men">
+		<div class="men-heading"><h2 class="text-danger text-uppercase">Men</h2></div>
+		<div class="container-fluid row">
+			<div class="col-6">For Men</div>
+			<div class="col-6 bg-danger" id="men-slider">
+				<div class="owl-carousel" >
+					<div class="item">1</div>
+					<div class="item">2</div>
+					<div class="item">3</div>
+				</div>
+			</div>
+		</div>
+	</section> -->  
 
 
 
@@ -101,7 +139,17 @@
 
     		$('.owl-carousel').owlCarousel({
     			loop: true,
-    			nav: true
+    			nav: true,
+    			items : 1,
+    			autoplay : true,
+    			autoplayTimeout : 6000,
+    			smartSpeed : 1500
+    		});
+
+    		$('#men-slider .owl-carousel').owlCarousel({
+    			loop: true,
+    			items : 2,
+    			nav: false
     		});
     	})
     </script>

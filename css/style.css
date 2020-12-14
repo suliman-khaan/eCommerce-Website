@@ -5,6 +5,7 @@
  *{
  	font-family: 'Poppins', sans-serif;
  	box-sizing: border-box;
+ 	scroll-behavior: smooth!important;
  }
 
   #nav-top form{
@@ -93,8 +94,86 @@ nav div ul li.active :before{
 	right: 12px;
 	border-radius: 20px;
 }
+#headCarousel{
+	position: relative;
+}
+#headCarousel .owl-carousel{
+	position: relative;
+	height: 100vh;
+}
+#headCarousel .owl-carousel .item{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+}
+#headCarousel .owl-carousel .item.slide-1{
+	background-image: url("../img/women1.jpg");
+}
+#headCarousel .owl-carousel .item.slide-2{
+	background-image: url("../img/women2.jpeg");
+}
+#headCarousel .owl-carousel .item.slide-3{
+	background-image: url("../img/men1.jpeg");
+}
+#headCarousel .owl-carousel .slide-content{
+	margin-right: -100px!important;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	left: 20%;
+	transform: translateY(-50%);
+	height: auto;
+	width: 100%;
+	opacity: 0;
+	transition: all 2000ms ease-in-out;
+}
+#headCarousel .owl-carousel .owl-item.active .slide-content{
+	opacity: 1;
+	left: 5%;
+}
+#headCarousel .slide-content:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: -1;
+}
+#headCarousel .owl-carousel .owl-nav{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+#headCarousel .owl-carousel .owl-nav .owl-prev,
+#headCarousel .owl-carousel .owl-nav .owl-next{
+	background: var(--red);
+	width: 30px;
+	height: 30px;
+	color: #fff;
+	outline: none;
+}
+#headCarousel .owl-carousel .owl-dots{
+	position: absolute;
+	left: 20px;
+	bottom: 10px;
 
-
+}
+#headCarousel .owl-carousel .owl-dots .owl-dot{
+	outline: none;
+}
+#headCarousel .owl-carousel .owl-dots .owl-dot span{
+	background-color: var(--red);
+	filter: grayscale(50%);
+}
+#headCarousel .owl-carousel .owl-dots .owl-dot.active span{
+	background-color: var(--red);
+	filter: grayscale(0);
+}
 
 
 @media only screen and (max-width: 768px){
@@ -106,5 +185,10 @@ nav div ul li.active :before{
 	}
 	.cart:before{
 		display: none;
+	}
+}
+@media only screen and (max-width: 576px){
+	#headCarousel .owl-carousel .slide-content{
+		width: 90%;
 	}
 }
